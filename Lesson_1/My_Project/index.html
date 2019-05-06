@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <script src="p5.js"></script>
+    <script src="grass.js"></script>
+    <script src="eatgrass.js"></script>
+    <script src="predator.js"></script>
+    <script src="bird.js"></script>
+    <script src="dragon.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body{
+            background-color:lightblue;
+        }
+        .inline{
+            display:inline-block;
+        }
+        .table{
+            display:inline-block;
+    
+        }
+        #legend 
+        {
+        border-collapse: collapse;
+        position: absolute;
+        top: 45;
+        right: 100;
+        width: 800px;
+        } 
+        .legend-color 
+        {
+        width: 30px;
+        height: 30px;
+        } 
+        td {
+            text-align:center;
+        border: 2px solid black; 
+        font-size: 14px; 
+        padding-left: 5px;}
+    </style>
+</head>
+
+
+<body>
+    <div class = "inline" style="background-color:green; width:15px; height:15px"></div>Խոտ
+    <div class = "inline" style="background-color:orange; width:15px; height:15px"></div>Խոտակեր
+    <div class = "inline" style="background-color:red; width:15px; height:15px"></div>Գիշատիչ
+    <div class = "inline" style="background-color:purple; width:15px; height:15px"></div>Թռչուն
+    <div class = "inline" style="background-color:blue; width:15px; height:15px"></div>Վիշապ
+    <div class = "inline" style="background-color:#acacac; width:15px; height:15px"></div>Դատարկ տարածք<br><br>
+    <div class = "table"><table id="legend">
+        <tr>
+            <td style = "font-weight:bold" class="legend-color">Գույն</td>
+            <td style = "font-weight:bold">Անվանում </td>
+            <td style = "font-weight:bold">Շարժվում է</td>
+            <td style = "font-weight:bold">Ուտում է</td>
+            <td style = "font-weight:bold">Բազմանում է</td>
+            <td style = "font-weight:bold">Սատկում է</td>
+        </tr>
+
+        <tr>
+            <td class="legend-color" style="background-color:gray"></td>
+            <td>Դատարկ վանդակներ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:green"></td>
+            <td>Խոտ</td>
+            <td></td>
+            <td></td>
+            <td>Մոտակա 8 վանդակներում, 4 տակտը մեկ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:yellow"></td>
+            <td>Խոտակեր</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Խոտերին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 1֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 10֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:red"></td>
+            <td>Գիշատիչ</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 2֊ով</td>
+            <td>Խոտակերներին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 2֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 15֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:purple"></td>
+            <td>Թռչուն</td>
+            <td>2-ական քայլերով, էներգիան քչանում է 3֊ով</td>
+            <td>Խոտակերներին և խոտերին,շարժվելիս էներգիան ավելանում է 3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 20֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:blue"></td>
+            <td>Վիշապ</td>
+            <td>2-ական կամ 3-ական քայլերով, էներգիան քչանում է 5֊ով, քայլում է և՛ խոտերով, և՛դատարկ տարածքներով: </td>
+            <td>Խոտերին, խոտակերներին, թռչուններին և գիշատիչներին: Խոտերին ուտելիս էներգիան ավելանում է 1֊ով, խոտակերներին ուտելիս՝ 2֊ով, թռչուններին ուտելիս՝ 4֊ով, գիշատիչներին ուտելիս՝ 3֊ով: </td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 25֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+    </table></div>
+</body>
+
+</html>
