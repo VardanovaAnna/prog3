@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        td{
+            font-weight:bold;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            background-color:lightblue;
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Երևան</h1>
+            </tr>
+            <tr>
+                <h1>Աննա Վարդանովա</h1>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+                <th scope="col">Եղանակ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանաչը խոտն է, որը բազմանում է 2 ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, թռչունը, կամ նրան կոխկրտում է գիշատիչը</td>
+                <td id="grassCount"></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Դեղինը խոտակերն է, որը բազմանում է 13 հատ խոտ ուտելուց հետո և մահանում է
+                    երբ նրան ուտում է գիշատիչը, թռչունը կամ վիշապը:</td>
+                <td id="grassEaterCount"></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմիրը գիշատիչն է, որը բազմանում է, երբ էներգիան 19-ից ավելի է։ Խոտ ուտելիս էներգիան ավելանում է 1-ով, խոտակեր ուտելիս՝ 2-ով։ Մահանում է երբ նրան ուտում է թռչունը կամ վիշապը։
+                  </td>
+                <td id="predatorCount"></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:pink;"></td>
+                <td>Վարդագույնը թռչունն է, որը բազմանում է երբ էներգիան 22-ից ավելի է։ Խոտ ուտելիս էներգիան ավելանում է 1-ով, խոտակեր ուտելիս՝ 2-ով, գիշատիչ ուտելիս՝ 3-ով։ Մահանում է երբ նրան ուտում է վիշապը կամ երբ էներգիան 0 է։ Քայլում է 2-ական քայլերով։ 
+                   </td>
+                <td id="birdCount"></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Կապույտը վիշապն է, որը բազմանում է երբ էներգիան 23-ից ավելի է։ Խոտակեր ուտելիս էներգիան ավելանում է 2-ով, գիշատիչ ուտելիս՝ 3-ով, թռչուն ուտելիս՝ 4-ով։ Մահանում է երբ էներգիան 0 է։ Քայլում է և՜ դատարկ տարածքներով, և՜ խոտերով, 2-ական կամ 3-ական քայլերով։ </td>
+                <td id="dragonCount"></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                    <th scope="row">6</th>
+                    <td scope="row" style="background-color:black;"></td>
+                    <td>Եղանակ։Երբ ջերմաստիճանը 5 աստիճան է, գեներացվում է նոր մատրիցա, իսկ երբ ջերմաստիճանը 10 աստիճան է, բոլոր կերպարները կանգ են առնում 2 վայրկյանով։ 10 դառնալուց հետո ջերմաստիճանը զրոյանում է և սկսում է նորից աճել։ </td>
+                    <td></td>
+                    <td id="weatherCount"></td>
+    
+                </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
